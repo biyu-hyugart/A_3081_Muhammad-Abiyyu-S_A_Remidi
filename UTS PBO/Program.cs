@@ -87,7 +87,7 @@ namespace MBG
     // no 3 - Inheritance 
     class PaketReguler : PaketMBG
     {
-            public string isiPaket = "Nasi, ayam, sayur, dan buah";
+        public string isiPaket = "Nasi, ayam, sayur, dan buah";
 
         public PaketReguler(string id, string nama, int stok) : base(id, nama, stok)
         {
@@ -101,6 +101,7 @@ namespace MBG
 
     class PaketKhusus : PaketMBG
     {
+        // Atribut tambahan
         public string jenisDiet;
 
         public PaketKhusus(string id, string nama, int stok, string diet) : base(id, nama, stok)
@@ -178,6 +179,7 @@ namespace MBG
         public void TampilkanDataMBG()
         {
             Console.WriteLine("Data Sekolah Penerima ");
+            Console.WriteLine("=== Data Sekolah Penerima ===");
             foreach (Sekolah s in daftarSekolah)
             {
                 s.TampilInfo();
@@ -185,6 +187,7 @@ namespace MBG
             }
 
             Console.WriteLine("Data Paket Makanan");
+            Console.WriteLine("=== Data Paket Makanan ===");
             foreach (PaketMBG p in daftarPaket)
             {
                 Console.WriteLine("ID Paket   : " + p.IdPaket);
